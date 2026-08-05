@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+    background:black;
+    color:white;
+}
+
+
+/* NAVBAR */
+
+nav{
+
+    height:80px;
+    width:100%;
+
+    background:black;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 8%;
+
+}
+
+
+.logo{
+    font-size:28px;
+    color:white;
+}
+
+
+nav ul{
+
+    display:flex;
+    gap:35px;
+    list-style:none;
+
+}
+
+
+nav ul li a{
+
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+
+nav ul li a:hover,
+nav ul li .active{
+
+    color:#00ff66;
+
+}
+
+
+
+/* CONTACT SECTION */
+
+.contact{
+
+    height:calc(100vh - 80px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+/* CONTACT CARD */
+
+.contact-box{
+
+    width:85%;
+    max-width:1000px;
+
+    display:flex;
+    gap:50px;
+
+    padding:50px;
+
+    background:#0d0d0d;
+
+    border-radius:20px;
+
+    box-shadow:0 0 30px rgba(0,255,100,.2);
+
+}
+
+
+
+/* TEXT */
+
+.contact-text{
+
+    flex:1;
+
+}
+
+
+.contact-text h1{
+
+    font-size:45px;
+    margin-bottom:20px;
+
+}
+
+
+.contact-text p{
+
+    color:#ccc;
+    line-height:1.6;
+
+}
+
+
+.info{
+
+    margin-top:30px;
+
+}
+
+
+.info p{
+
+    margin:15px 0;
+
+    color:#00ff66;
+
+}
+
+
+
+/* FORM */
+
+form{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    background:black;
+
+    border:1px solid #333;
+
+    color:white;
+
+    outline:none;
+
+    border-radius:10px;
+
+}
+
+
+textarea{
+
+    height:130px;
+    resize:none;
+
+}
+
+
+input:focus,
+textarea:focus{
+
+    border-color:#00ff66;
+
+}
+
+
+
+/* BUTTON */
+
+button{
+
+    padding:15px;
+
+    border:none;
+
+    background:#00ff66;
+
+    color:black;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    background:white;
+
+    color:black;
+
+}
