@@ -20,7 +20,6 @@ color:white;
 
 
 
-
 /* NAVBAR */
 
 
@@ -64,6 +63,7 @@ color:#38bdf8;
 
 
 
+
 .nav-links{
 
 display:flex;
@@ -78,9 +78,9 @@ list-style:none;
 
 .nav-links a{
 
-text-decoration:none;
-
 color:#cbd5e1;
+
+text-decoration:none;
 
 font-size:15px;
 
@@ -101,10 +101,10 @@ color:#38bdf8;
 
 
 
-/* CONTACT */
+/* ABOUT */
 
 
-.contact{
+.about{
 
 padding:40px 8%;
 
@@ -112,7 +112,7 @@ padding:40px 8%;
 
 
 
-.contact-title{
+.about-title{
 
 text-align:center;
 
@@ -122,7 +122,7 @@ margin-bottom:50px;
 
 
 
-.contact-title h1{
+.about-title h1{
 
 font-size:50px;
 
@@ -130,15 +130,15 @@ font-size:50px;
 
 
 
-.contact-title h1::after{
+.about-title h1::after{
 
 content:"";
 
 display:block;
 
-height:4px;
-
 width:80px;
+
+height:4px;
 
 background:#38bdf8;
 
@@ -150,7 +150,7 @@ border-radius:20px;
 
 
 
-.contact-title p{
+.about-title p{
 
 color:#cbd5e1;
 
@@ -162,63 +162,48 @@ font-size:17px;
 
 
 
-.contact-container{
+/* CARDS */
+
+
+.cards{
 
 display:flex;
 
 justify-content:center;
 
-gap:40px;
-
-align-items:flex-start;
-
-}
-
-
-
-
-
-/* CARDS */
-
-
-.contact-cards{
-
-display:grid;
-
-grid-template-columns:repeat(2,230px);
-
 gap:25px;
 
+flex-wrap:wrap;
+
 }
 
 
 
+.card{
 
-.contact-card{
+width:230px;
 
-background:rgba(30,41,59,.8);
+min-height:240px;
 
 padding:30px;
 
-height:180px;
+background:rgba(30,41,59,.8);
 
 border-radius:20px;
 
-text-align:center;
-
 border:1px solid rgba(255,255,255,.08);
 
-transition:.4s;
-
 box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+transition:.4s;
 
 }
 
 
 
-.contact-card:hover{
+.card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
 border-color:#38bdf8;
 
@@ -226,11 +211,11 @@ border-color:#38bdf8;
 
 
 
-.contact-card h2{
+.card h2{
 
 color:#38bdf8;
 
-font-size:21px;
+font-size:22px;
 
 margin-bottom:20px;
 
@@ -238,11 +223,11 @@ margin-bottom:20px;
 
 
 
-.contact-card p{
+.card p{
 
 color:#cbd5e1;
 
-line-height:1.6;
+line-height:1.7;
 
 font-size:14px;
 
@@ -252,32 +237,58 @@ font-size:14px;
 
 
 
-/* FORM */
+/* SKILLS */
 
 
-.message-box{
+.skills{
 
-width:450px;
+margin-top:80px;
 
-background:rgba(30,41,59,.8);
-
-padding:35px;
-
-border-radius:20px;
-
-border:1px solid rgba(255,255,255,.08);
-
-box-shadow:0 15px 40px rgba(0,0,0,.3);
+text-align:center;
 
 }
 
 
 
-.message-box h2{
+.skills h1{
 
-text-align:center;
+font-size:40px;
 
-margin-bottom:25px;
+margin-bottom:35px;
+
+}
+
+
+
+
+.skill-box{
+
+max-width:600px;
+
+margin:auto;
+
+text-align:left;
+
+}
+
+
+
+
+.skill-box div:first-child{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:20px;
+
+font-weight:600;
+
+}
+
+
+
+.skill-box span{
 
 color:#38bdf8;
 
@@ -285,93 +296,55 @@ color:#38bdf8;
 
 
 
-form{
+.bar{
 
-display:flex;
+height:10px;
 
-flex-direction:column;
+background:#334155;
 
-gap:18px;
+border-radius:20px;
 
-}
+overflow:hidden;
 
-
-
-input,
-textarea{
-
-
-padding:15px;
-
-background:#0f172a;
-
-border:1px solid #334155;
-
-border-radius:10px;
-
-color:white;
-
-font-size:15px;
-
-outline:none;
+margin-top:10px;
 
 }
 
 
 
-input:focus,
-textarea:focus{
+.bar div{
 
-border-color:#38bdf8;
-
-}
-
-
-
-textarea{
-
-height:130px;
-
-resize:none;
-
-}
-
-
-
-button{
-
-
-padding:15px;
-
-border:none;
-
-border-radius:30px;
+height:100%;
 
 background:#38bdf8;
 
-color:#0f172a;
-
-font-size:16px;
-
-font-weight:600;
-
-cursor:pointer;
-
-transition:.3s;
+border-radius:20px;
 
 }
 
 
 
-button:hover{
+.html{
 
-background:white;
-
-transform:translateY(-5px);
+width:90%;
 
 }
 
 
+
+.css{
+
+width:85%;
+
+}
+
+
+
+.responsive{
+
+width:80%;
+
+}
 
 
 
@@ -379,34 +352,7 @@ transform:translateY(-5px);
 /* RESPONSIVE */
 
 
-@media(max-width:1000px){
-
-
-.contact-container{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-
-.message-box{
-
-width:100%;
-
-max-width:500px;
-
-}
-
-
-}
-
-
-
-
-@media(max-width:700px){
-
+@media(max-width:800px){
 
 
 .navbar{
@@ -418,7 +364,6 @@ gap:25px;
 }
 
 
-
 .nav-links{
 
 gap:20px;
@@ -426,21 +371,18 @@ gap:20px;
 }
 
 
-
-.contact-cards{
-
-grid-template-columns:1fr;
-
-}
-
-
-
-.contact-title h1{
+.about-title h1{
 
 font-size:38px;
 
 }
 
+
+.card{
+
+width:90%;
+
+}
 
 
 }
