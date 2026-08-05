@@ -20,6 +20,7 @@ color:white;
 
 
 
+
 /* NAVBAR */
 
 
@@ -63,7 +64,6 @@ color:#38bdf8;
 
 
 
-
 .nav-links{
 
 display:flex;
@@ -78,9 +78,9 @@ list-style:none;
 
 .nav-links a{
 
-color:#cbd5e1;
-
 text-decoration:none;
+
+color:#cbd5e1;
 
 font-size:15px;
 
@@ -101,10 +101,10 @@ color:#38bdf8;
 
 
 
-/* ABOUT */
+/* CONTACT */
 
 
-.about{
+.contact{
 
 padding:40px 8%;
 
@@ -112,7 +112,7 @@ padding:40px 8%;
 
 
 
-.about-title{
+.contact-title{
 
 text-align:center;
 
@@ -122,7 +122,7 @@ margin-bottom:50px;
 
 
 
-.about-title h1{
+.contact-title h1{
 
 font-size:50px;
 
@@ -130,15 +130,15 @@ font-size:50px;
 
 
 
-.about-title h1::after{
+.contact-title h1::after{
 
 content:"";
 
 display:block;
 
-width:80px;
-
 height:4px;
+
+width:80px;
 
 background:#38bdf8;
 
@@ -150,7 +150,7 @@ border-radius:20px;
 
 
 
-.about-title p{
+.contact-title p{
 
 color:#cbd5e1;
 
@@ -162,48 +162,63 @@ font-size:17px;
 
 
 
-/* CARDS */
-
-
-.cards{
+.contact-container{
 
 display:flex;
 
 justify-content:center;
 
-gap:25px;
+gap:40px;
 
-flex-wrap:wrap;
+align-items:flex-start;
 
 }
 
 
 
-.card{
 
-width:230px;
 
-min-height:240px;
+/* CARDS */
 
-padding:30px;
+
+.contact-cards{
+
+display:grid;
+
+grid-template-columns:repeat(2,230px);
+
+gap:25px;
+
+}
+
+
+
+
+.contact-card{
 
 background:rgba(30,41,59,.8);
 
+padding:30px;
+
+height:180px;
+
 border-radius:20px;
+
+text-align:center;
 
 border:1px solid rgba(255,255,255,.08);
 
-box-shadow:0 15px 40px rgba(0,0,0,.3);
-
 transition:.4s;
+
+box-shadow:0 15px 40px rgba(0,0,0,.3);
 
 }
 
 
 
-.card:hover{
+.contact-card:hover{
 
-transform:translateY(-12px);
+transform:translateY(-10px);
 
 border-color:#38bdf8;
 
@@ -211,11 +226,11 @@ border-color:#38bdf8;
 
 
 
-.card h2{
+.contact-card h2{
 
 color:#38bdf8;
 
-font-size:22px;
+font-size:21px;
 
 margin-bottom:20px;
 
@@ -223,11 +238,11 @@ margin-bottom:20px;
 
 
 
-.card p{
+.contact-card p{
 
 color:#cbd5e1;
 
-line-height:1.7;
+line-height:1.6;
 
 font-size:14px;
 
@@ -237,58 +252,32 @@ font-size:14px;
 
 
 
-/* SKILLS */
+/* FORM */
 
 
-.skills{
+.message-box{
 
-margin-top:80px;
+width:450px;
+
+background:rgba(30,41,59,.8);
+
+padding:35px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+}
+
+
+
+.message-box h2{
 
 text-align:center;
 
-}
-
-
-
-.skills h1{
-
-font-size:40px;
-
-margin-bottom:35px;
-
-}
-
-
-
-
-.skill-box{
-
-max-width:600px;
-
-margin:auto;
-
-text-align:left;
-
-}
-
-
-
-
-.skill-box div:first-child{
-
-display:flex;
-
-justify-content:space-between;
-
-margin-top:20px;
-
-font-weight:600;
-
-}
-
-
-
-.skill-box span{
+margin-bottom:25px;
 
 color:#38bdf8;
 
@@ -296,55 +285,93 @@ color:#38bdf8;
 
 
 
-.bar{
+form{
 
-height:10px;
+display:flex;
 
-background:#334155;
+flex-direction:column;
 
-border-radius:20px;
-
-overflow:hidden;
-
-margin-top:10px;
+gap:18px;
 
 }
 
 
 
-.bar div{
+input,
+textarea{
 
-height:100%;
+
+padding:15px;
+
+background:#0f172a;
+
+border:1px solid #334155;
+
+border-radius:10px;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+}
+
+
+
+input:focus,
+textarea:focus{
+
+border-color:#38bdf8;
+
+}
+
+
+
+textarea{
+
+height:130px;
+
+resize:none;
+
+}
+
+
+
+button{
+
+
+padding:15px;
+
+border:none;
+
+border-radius:30px;
 
 background:#38bdf8;
 
-border-radius:20px;
+color:#0f172a;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
 
 }
 
 
 
-.html{
+button:hover{
 
-width:90%;
+background:white;
 
-}
-
-
-
-.css{
-
-width:85%;
+transform:translateY(-5px);
 
 }
 
 
-
-.responsive{
-
-width:80%;
-
-}
 
 
 
@@ -352,7 +379,34 @@ width:80%;
 /* RESPONSIVE */
 
 
-@media(max-width:800px){
+@media(max-width:1000px){
+
+
+.contact-container{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+
+.message-box{
+
+width:100%;
+
+max-width:500px;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:700px){
+
 
 
 .navbar{
@@ -364,6 +418,7 @@ gap:25px;
 }
 
 
+
 .nav-links{
 
 gap:20px;
@@ -371,18 +426,21 @@ gap:20px;
 }
 
 
-.about-title h1{
+
+.contact-cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.contact-title h1{
 
 font-size:38px;
 
 }
 
-
-.card{
-
-width:90%;
-
-}
 
 
 }
